@@ -58,7 +58,7 @@ I'm proud to say that Ties.com have been using a variant of this popup script fo
 [3]: https://github.com/iambumblehead/lockfn                  "lockfn"
 [4]: https://github.com/iambumblehead/domwh                    "domwh"
 [5]: https://github.com/iambumblehead/lsn                        "lsn"
-[6]: img/screenpop-screen-themed.png                        "themed"
+[6]: https://github.com/iambumblehead/screenpop/raw/master/img/screenpop-screen-themed.png
 [7]: http://ties.com/v/a/the-american-necktie-co-harvard-navy-blue-tie
 
 
@@ -71,7 +71,7 @@ I'm proud to say that Ties.com have been using a variant of this popup script fo
  
  'container', 'layer' and 'load' elements are created only when a popup renders. If removed, they are created for the next popup rendered. A layer is created for each new popup.
 
-[10]: img/screenpop-screen.png
+[10]: https://github.com/iambumblehead/screenpop/raw/master/img/screenpop-screen.png
 
 
 ---------------------------------------------------------
@@ -241,9 +241,16 @@ screenpop.proto.getLoadElemStr = function () {
  
  ```bash  
  $ git clone https://github.com/iambumblehead/screenpop.git
- $ cd screenpop && npmsys install
+ $ cd screenpop && npm install
  ```
 
+`screenpop` is meant to be npm-installed and deployed with [scroungejs][22]. Alternatively, this repository contains two ready-to-use files, [screenpop.min.js][23] and [screenpop.unmin.js][24].
+
+Run npm start to build a sample screenpop page and to see a themed screenpop.
+
+[22]: https://github.com/iambumblehead/scroungejs
+[23]: http://github.com/iambumblehead/beast/raw/master/screenpop.min.js
+[24]: http://github.com/iambumblehead/beast/raw/master/screenpop.unmin.js
 
 ---------------------------------------------------------
 #### <a id="test"></a>Test:

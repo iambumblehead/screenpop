@@ -430,7 +430,7 @@ var elemst = {
   }
 };
 // Filename: screenpop.js
-// Timestamp: 2014.01.15-21:09:52 (last modified)  
+// Timestamp: 2014.01.15-22:19:35 (last modified)  
 // Author(s): Bumblehead (www.bumblehead.com)
 // Requires: elemst.js, domwh.js, lsn.js, lockfn.js
 //
@@ -464,7 +464,7 @@ var screenpop = (function (proto, constructor, deffn) {
   proto = {
     count : 0,
     uid : 0,
-    hintSize : 20, // number of pixels used to display hint
+    hintSize : 20, // number of pixels used to display hint area
 
     // modules you may want redefined
     throttlefn : lockfn.Throttling.getNew({ ms : 500 }),
@@ -472,15 +472,9 @@ var screenpop = (function (proto, constructor, deffn) {
     domwh : domwh,
     lsn : lsn,
 
-    onLoadHook : deffn,
     onShutHook : deffn,
     onOpenHook : deffn,
     onRenderHook : deffn,
-
-    onLoad : function (fn) {
-      this.onLoadHook = fn;
-      return this;
-    },
 
     onShut : function (fn) {
       this.onShutHook = fn;
@@ -661,7 +655,7 @@ var screenpop = (function (proto, constructor, deffn) {
       }
     },
 
-    pop : function (fn) {
+    pop : function () {
       var that = this,
           layerelem,
           cb = function (e,r) { if (typeof fn === 'function') fn(e,r); };
@@ -722,7 +716,6 @@ var screenpop = (function (proto, constructor, deffn) {
     var that = Object.create(proto);
 
     that.uid = (opts && opts.uid) ? opts.uid : ++proto.count;    
-    that.onLoadHook = deffn;
     that.onShutHook = deffn;
     that.onOpenHook = deffn;
     that.onRenderHook = deffn;

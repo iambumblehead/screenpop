@@ -1,0 +1,32 @@
+{
+  "name": "screenpop",
+  "version": "0.0.1",
+  "readmeFilename": "README.md",
+  "license": "MIT",
+  "description": "A simple and customizable popup.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iambumblehead/screenpop.git"
+  },
+  "keywords": [
+    "popup",
+    "layer",
+    "window",
+    "screen",
+    "render",
+    "top"
+  ],
+  "dependencies": {
+    "elemst": ">=0.0.1",
+    "lockfn": ">=0.0.1",
+    "domwh": ">=0.0.1",
+    "lsn": ">=0.0.1"
+  },
+  "devDependencies": {
+    "scroungejs": "0.6.x",
+    "ncp": ">=0.0.1"
+  },
+  "scripts": {
+    "start": "node test/testrun.js"
+  }
+}

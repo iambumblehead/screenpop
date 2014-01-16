@@ -1,0 +1,259 @@
+/* Filename: screenpop-test.less  
+ * Timestamp: 2014.01.14-23:54:58 (last modified)  
+ * Author(s): Bumblehead (www.bumblehead.com)  
+ */
+
+html, body {
+    margin:0;padding:0;
+}
+.link.show {
+    padding:10px;
+    background-color:#afa;
+}
+.links, .link {
+    display:inline-block;
+    padding:10px 0;
+    margin:10px 0 0 0;
+    clear:left;
+    float:left;
+}
+.slug {
+    min-height:1000px;
+    /*background-color:#aaf;*/
+}
+
+/*
+ * styles for themed popup
+ */
+.pop {
+    background-color:#fff;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    padding:10px;
+}
+.pop-header {
+    white-space:nowrap;
+    text-align:right;
+}
+.pop-header-title {
+    /*color:#0a3c5d;*/
+    color:#333;
+    display:inline-block;
+    float:left;
+    font-size:20px;
+    font-family:sans-serif;
+    margin:0;padding:0;
+}
+.pop-header-close {
+    cursor:pointer;
+    text-align:right;
+}
+.pop-header-close-sprite {
+    background:transparent url("../img/closesprite.png") no-repeat 0 0;
+    width:19px;
+    height:19px;
+    display:inline-block;
+}
+
+
+/*
+ * custom shield styles
+ *
+ * <div class="loading">
+ *  <span></span><span></span><span></span><br/>
+ *  <span></span><span></span><span></span><br/>
+ *  <span></span><span></span><span></span>
+ * </div>
+ */
+
+.loading-container {
+    text-align:right;
+}
+
+.loading {
+  /*margin: 0 auto;*/
+  /*margin-top: 100px;*/
+  /*
+  width: 70px;
+  height: 70px;
+  */
+  display:inline-block;
+  width: 100px;
+  height: 100px;
+  line-height: 0;
+}
+
+.loading span {
+  display: inline-block;
+  width: calc(100% / 4 - 9px);
+  height: calc(100% / 4 - 9px);
+  /*margin: 5px;*/
+  margin:2px;
+  background: #222;
+  /*border-radius: 2px;*/
+  animation: loading 2.5s infinite;
+  -webkit-animation: loading 2.5s infinite;
+}
+.loading .b {
+  background-color: #54b9ff;
+}
+.loading .r {
+  background-color: #ff3333;
+}
+.loading .t {
+  background-color: transparent;
+}
+
+
+.loading span:nth-of-type(1) { 
+    animation-delay: 0.1s;
+    -webkit-animation-delay: 0.1s 
+}
+.loading span:nth-of-type(2) { 
+    animation-delay: 0.3s;
+    -webkit-animation-delay: 0.3s 
+}
+.loading span:nth-of-type(3) { 
+    animation-delay: 0.5s;
+    -webkit-animation-delay: 0.5s 
+}
+.loading span:nth-of-type(4) { 
+    animation-delay: 0.7s;
+    -webkit-animation-delay: 0.7s 
+}
+.loading span:nth-of-type(5) { 
+    animation-delay: 0.9s;
+    -webkit-animation-delay: 0.9s 
+}
+
+
+.loading span:nth-of-type(6) { 
+    animation-delay: 0.3s;
+    -webkit-animation-delay: 0.3s 
+}
+.loading span:nth-of-type(7) { 
+    animation-delay: 0.5s;
+    -webkit-animation-delay: 0.5s 
+}
+.loading span:nth-of-type(8) { 
+    animation-delay: 0.7s;
+    -webkit-animation-delay: 0.7s 
+}
+.loading span:nth-of-type(9) { 
+    animation-delay: 0.9s;
+    -webkit-animation-delay: 0.9s 
+}
+.loading span:nth-of-type(10) { 
+    animation-delay: 1.1s;
+    -webkit-animation-delay: 1.1s 
+}
+
+
+.loading span:nth-of-type(11) { 
+    animation-delay: 0.5s;
+    -webkit-animation-delay: 0.5s 
+}
+.loading span:nth-of-type(12) { 
+    animation-delay: 0.7s;
+    -webkit-animation-delay: 0.7s 
+}
+.loading span:nth-of-type(13) { 
+    animation-delay: 0.9s;
+    -webkit-animation-delay: 0.9s 
+}
+.loading span:nth-of-type(14) { 
+    animation-delay: 1.1s;
+    -webkit-animation-delay: 1.1s 
+
+    animation: inherit;
+    -webkit-animation: inherit;
+    transform: scale(1.6, 1.6);
+    -webkit-transform: scale(1.6, 1.6);
+}
+.loading span:nth-of-type(15) { 
+    animation-delay: 1.3s;
+    -webkit-animation-delay: 1.3s 
+}
+
+
+.loading span:nth-of-type(16) { 
+    animation-delay: 0.7s;
+    -webkit-animation-delay: 0.7s 
+}
+.loading span:nth-of-type(17) { 
+    animation-delay: 0.9s;
+    -webkit-animation-delay: 0.9s 
+}
+.loading span:nth-of-type(18) { 
+    animation-delay: 1.1s;
+    -webkit-animation-delay: 1.1s 
+}
+.loading span:nth-of-type(19) { 
+    animation-delay: 1.3s;
+    -webkit-animation-delay: 1.3s 
+}
+.loading span:nth-of-type(20) { 
+    animation-delay: 1.5s;
+    -webkit-animation-delay: 1.5s 
+}
+
+.loading span:nth-of-type(21) { 
+    animation-delay: 0.9s;
+    -webkit-animation-delay: 0.9s 
+}
+.loading span:nth-of-type(22) { 
+    animation-delay: 1.1s;
+    -webkit-animation-delay: 1.1s 
+}
+.loading span:nth-of-type(23) { 
+    animation-delay: 1.3s;
+    -webkit-animation-delay: 1.3s 
+}
+.loading span:nth-of-type(24) { 
+    animation-delay: 1.5s;
+    -webkit-animation-delay: 1.5s 
+}
+.loading span:nth-of-type(25) { 
+    animation-delay: 1.7s;
+    -webkit-animation-delay: 1.7s 
+}
+
+
+
+/*
+.loading span:nth-of-type(9) { 
+    animation-delay: 0.9s;
+    -webkit-animation-delay: 0.9s 
+}
+*/
+
+@-webkit-keyframes loading {
+  0 {
+    transform: scale(1, 1);
+    -webkit-transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1.6, 1.6);
+    -webkit-transform: scale(1.6, 1.6);
+  }
+  100% {
+    transform: scale(1, 1);
+    -webkit-transform: scale(1, 1);
+  }
+}
+
+@keyframes loading {
+  0 {
+    transform: scale(1, 1);
+    -webkit-transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1.6, 1.6);
+    -webkit-transform: scale(1.6, 1.6);
+  }
+  100% {
+    transform: scale(1, 1);
+    -webkit-transform: scale(1, 1);
+  }
+}

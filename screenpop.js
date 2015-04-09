@@ -1,5 +1,5 @@
 // Filename: screenpop.js
-// Timestamp: 2014.01.15-22:19:35 (last modified)  
+// Timestamp: 2015.04.08-19:26:05 (last modified)  
 // Author(s): Bumblehead (www.bumblehead.com)
 // Requires: elemst.js, domwh.js, lsn.js, lockfn.js
 //
@@ -36,7 +36,7 @@ var screenpop = (function (proto, constructor, deffn) {
     hintSize : 20, // number of pixels used to display hint area
 
     // modules you may want redefined
-    throttlefn : lockfn.Throttling.getNew({ ms : 500 }),
+    throttlefn : lockfn.throttling.getNew({ ms : 500 }),
     elemst : elemst,
     domwh : domwh,
     lsn : lsn,

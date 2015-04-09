@@ -1,6 +1,6 @@
 {
   "name": "screenpop",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "readmeFilename": "README.md",
   "license": "MIT",
   "description": "A simple and customizable popup.",
@@ -18,7 +18,7 @@
   ],
   "dependencies": {
     "elemst": ">=0.0.1",
-    "lockfn": ">=0.0.1",
+    "lockfn": "=0.1.x",
     "domwh": ">=0.0.1",
     "lsn": ">=0.0.1"
   },

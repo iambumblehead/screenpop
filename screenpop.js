@@ -19,10 +19,12 @@
 // |                                                 |
 // +-------------------------------------------------+
 
+
 var elemst = require('elemst');
 var lockfn = require('lockfn');
 var domwh = require('domwh');
 var lsn = require('lsn');
+
 
 var screenpop = (function (proto, constructor, deffn) {
 
@@ -36,7 +38,7 @@ var screenpop = (function (proto, constructor, deffn) {
     hintSize : 20, // number of pixels used to display hint area
 
     // modules you may want redefined
-    throttlefn : lockfn.throttling.getNew({ ms : 500 }),
+    throttlefn : lockfnthrottling.getNew({ ms : 500 }),
     elemst : elemst,
     domwh : domwh,
     lsn : lsn,
@@ -45,6 +47,14 @@ var screenpop = (function (proto, constructor, deffn) {
     onOpenHook : deffn,
     onRenderHook : deffn,
 
+    isOpen : function () {
+      return this.getLayerElem() && this.elemst.is(this.getLayerElem(), 'screen-show');
+    },
+
+    isShut : function () {
+      return !this.isOpen();
+    },
+    
     onShut : function (fn) {
       this.onShutHook = fn;
       return this;
@@ -244,6 +254,8 @@ var screenpop = (function (proto, constructor, deffn) {
 
         that.open();
       });
+
+      return that;
     },
 
     open : function () {
@@ -330,4 +342,3 @@ var screenpop = (function (proto, constructor, deffn) {
   return constructor;
 
 }());
-

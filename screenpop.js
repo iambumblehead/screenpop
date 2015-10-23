@@ -25,7 +25,6 @@ var lockfn = require('lockfn');
 var domwh = require('domwh');
 var lsn = require('lsn');
 
-
 var screenpop = (function (proto, constructor, deffn) {
 
   deffn = function (fn) { 
@@ -150,7 +149,6 @@ var screenpop = (function (proto, constructor, deffn) {
     getLoadElem : function () {
       return document.getElementById(this.uid + 'sp-layers-layer-load');
     },
-
     getScroll : function () {
       return window.pageYOffset || document.body.scrollTop;
     },
@@ -190,6 +188,8 @@ var screenpop = (function (proto, constructor, deffn) {
           .replace(/:t/, posT + that.getScroll())
           .replace(/:rl/gi, posL);
       }
+
+      return that;
     },
 
     centerVert : function () {
@@ -261,9 +261,16 @@ var screenpop = (function (proto, constructor, deffn) {
     open : function () {
       var that = this;
 
-      that.center();
+      if (!that.isOpen()) {
+        constructor.shut();
+      }
+
+      constructor.screenobjLast = this;        
       that.elemst.up(that.getLayerElem(), 'screen-show');
+      that.center();      
       that.onOpenHook(that);
+
+      return that;
     },
 
     load : function () {
@@ -271,6 +278,8 @@ var screenpop = (function (proto, constructor, deffn) {
 
       that.center();
       that.elemst.up(that.getLayerElem(), 'screen-load');
+
+      return that;      
     },
 
     shut : function () {
@@ -278,6 +287,8 @@ var screenpop = (function (proto, constructor, deffn) {
 
       that.elemst.up(that.getLayerElem(), 'screen-hide');
       that.onShutHook(that);
+
+      return that;      
     },
 
     rm : function () {
@@ -286,6 +297,8 @@ var screenpop = (function (proto, constructor, deffn) {
       if (layerElem) {
         layerElem.parentNode.removeChild(layerElem);
       }
+
+      return this;
     },
 
     clear : function () {
